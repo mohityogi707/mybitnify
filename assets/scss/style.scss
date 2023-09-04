@@ -1,0 +1,211 @@
+@charset "UTF-8";
+@import "variables";
+
+@mixin media-breakpoint($name) {
+  @if $name == basic {
+    @content; 
+  }
+}
+
+@mixin dark-media-breakpoint($name) {
+  @if $name == basic {
+    @content; 
+  }
+}
+
+
+
+@mixin media-breakpoint-up($name) {
+  @if $name ==sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+
+  @else if $name ==md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $name ==lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $name ==xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $name ==xxl {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-down($name) {
+  @if $name ==sm {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==md {
+    @media (max-width: 767.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==lg {
+    @media (max-width: 991.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==xl {
+    @media (max-width: 1199.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==xxl {
+    @media (max-width: 1399.98px) {
+      @content;
+    }
+  }
+}
+
+@mixin dark-media-breakpoint-up($name) {
+  @if $name ==sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+
+  @else if $name ==md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $name ==lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $name ==xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $name ==xxl {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+@mixin dark-media-breakpoint-down($name) {
+  @if $name ==sm {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==md {
+    @media (max-width: 767.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==lg {
+    @media (max-width: 991.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==xl {
+    @media (max-width: 1199.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==xxl {
+    @media (max-width: 1399.98px) {
+      @content;
+    }
+  }
+}
+
+
+
+:root{
+  --body-bg: #121212;
+  --text-Clr: #fff;  
+  --themeing1: #185CA0;
+  --themeing2: #1D1D1D;
+  --themeing3: #2CBD96;
+  --themeing4: #E96464;
+  --text-gray: #CAC4D0;
+  --darborder: #303030;
+  --light-bg:#D9D9D9B2;
+  --themeing1dark: #134c85;
+  // --light-blackBg:#181818;
+
+  --gray: #6D7188;
+  --themeing1dark: #134c85;
+  --light-bg:#D9D9D9B2;
+}
+
+.lightMode{
+  --body-bg: #fff;
+  --text-Clr: #121212;  
+  --themeing1: #185CA0;
+  --themeing2: #F3F3F3;
+  --themeing3: #2CBD96;
+  --themeing4: #E96464;
+  --text-gray: #949494;
+  --darborder: #303030;
+  --gray: #9f9f9f;
+  --themeing1dark: #134c85;
+  --light-bg:#898787;
+
+}
+
+$bodyBg: #{var(--body-bg)};
+$textClr: #{var(--text-Clr)};
+$theme-blue: #{var(--themeing1)};
+$theme-dark: #{var(--themeing2)};
+$theme-green: #{var(--themeing3)};
+$theme-red: #{var(--themeing4)};
+$text-gray: #{var(--text-gray)};
+$dark-border: #{var(--darborder)};
+$light-bg: #{var(--light-bg)};
+$theme-blueDark: #{var(--themeing1dark)};
+// $light-blackBg:#{var(--light-blackBg)};
+$gray-bg: #{var(--gray)};
+$theme-blueDark: #{var(--themeing1dark)};
+$light-bg: #{var(--light-bg)};
+
+
+
+
+
+
+@import "mainConfig";
+@import "header";
+@import "footer";
+@import "pages";
+@import "forms";
+@import "button";
+@import "auth";
+@import "common";
+@import "index";
+@import "darkMode"
+

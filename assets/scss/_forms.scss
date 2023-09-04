@@ -1,0 +1,223 @@
+// ? @@@@@@@@@@@@@@@@@@@@@@[  forms start  ]@@@@@@@@@@@@@@@@@@@@@@
+@include media-breakpoint(basic) {
+    .form {
+        & .cards {
+            background-color: $theme-dark;
+            border-radius: 10px;
+            padding: 1.5rem 1rem;
+            & .form-floating {
+                & .form-control {
+                    height: 47px;
+                    border: 1px solid $dark-border;
+                    color: $text-gray;
+                    font-size: 14px;
+                    &:not(:placeholder-shown),
+                    &:focus {
+                        padding-top: 0.925rem;
+                        padding-bottom: 0.625rem;
+                        &~label{
+                            transform: scale(0.85) translateY(-1.5rem) translateX(-0.15rem);
+                            opacity: 95;
+                            left: 7px;
+                        }
+                    }
+                    &:-webkit-autofill,
+                    &:-webkit-autofill:hover,
+                    &:-webkit-autofill:focus {
+                        -webkit-text-fill-color: $textClr;
+                        transition: background-color 5000s ease-in-out 0s;
+                        -webkit-background-origin: unset;
+                        caret-color: $textClr;
+                    }
+                }
+                // &>label{
+                //     max-width: 100% !important;
+                // }
+                & label{
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 18.75px;
+                    color: $text-gray;
+                    background-color: $theme-dark;
+                    width: auto !important;
+                    height: calc(100% - 2px);
+                    border-radius: 5px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    left: 1px;
+                    top: 1px;
+                    bottom: 1px;
+                    & span {
+                        background-color: $theme-dark;
+                        padding: 0px 5px;
+                        color: $text-gray;
+                    }
+                }
+            }
+            & .form-select {
+                border: 1px solid $dark-border;
+                color: $text-gray;
+                font-size: 14px;
+                appearance: auto;
+                background: $theme-dark;
+                padding: 0rem 0.5rem;
+            }
+            & .input-group {
+                & .input-group-text {
+                    border: 1px solid $dark-border;
+                    & .passwordText{
+                        cursor: pointer;
+                        position: relative;
+                        height: 20px;
+                        width: 20px;
+                        & img {
+                            position: absolute;
+                            inset: 0;
+                            margin: auto;
+                        }
+                        & .hiddenImg {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        & .showImg {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+            & .forgot {
+                font-size: 12px;
+                line-height: 14.06px;
+                font-weight: 400;
+                right: 1rem;
+                & a {
+                    color: $text-gray;
+                }
+            }
+            &.start-label {
+                & .form-floating{
+                    & .form-control {
+                        &:not(:placeholder-shown),
+                        &:focus {
+                            &~label{
+                                transform: scale(0.85) translateY(-1.5rem) translateX(-4.75rem);
+                                left: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+            & .verificationHeading {
+                font-size: 16px;
+                color: $text-gray;
+            }
+        }
+        & .dontaccount {
+            color: $textClr;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16.41px;
+            & a {
+                color: $theme-blue;
+            }
+        }
+        & .verificationCode {
+            font-size: 14px;
+            color: $theme-blue;
+        }
+        & .form-check {
+            & .form-check-input {
+                width: 17px;
+                height: 17px;
+                border-radius: 2px;
+                border: 1px solid $dark-border;
+            }
+            & .form-check-label {
+                cursor: pointer;
+                font-size: 12px;
+                line-height: 14.06px;
+                font-weight: 400;
+                color: $textClr;
+                & span {
+                    font-weight: 700;
+                    color: $theme-blue;
+                }
+            }
+        }
+        & .referAccordion {
+            & .accordion {
+                & .accordion-item {
+                    & .accordion-header {
+                        & .accordion-button {
+                            font-size: 16px;
+                            line-height: 18.75px;
+                            font-weight: 400;
+                            color: $textClr;
+                            & span {
+                                font-size: 12px;
+                                line-height: 14.06px;
+                                color: $text-gray;
+                            }
+                            &::after{
+                                margin: 0px;
+                                background: url(../img/svg/downarrow.svg) no-repeat;
+                                background-position: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .navs {
+        padding: 4px;
+        background-color: $theme-dark;
+        border-radius: 5px;
+        & .nav-item {
+            min-width: 116px;
+            & .nav-link {
+                height: 31px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 14px;
+                color: $text-gray;
+                border-radius: 5px;
+                &.active{
+                    background-color: $theme-blue;
+                    color: $textClr;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+// ! @@@@@@@@@@@@@@@@@@@@@@[  forms start  ]@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+
+
+

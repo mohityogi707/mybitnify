@@ -1,0 +1,1943 @@
+
+$bodyBg: #{var(--body-bg)};
+$textClr: #{var(--text-Clr)};
+$theme-blue: #{var(--themeing1)};
+$theme-dark: #{var(--themeing2)};
+$theme-green: #{var(--themeing3)};
+$theme-red: #{var(--themeing4)};
+$text-gray: #{var(--text-gray)};
+$dark-border: #{var(--darborder)};
+$light-bg: #{var(--light-bg)};
+
+
+
+
+
+
+@include media-breakpoint(basic) {
+}
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+
+body {
+    &.modal-open {
+        & .modalOverlay {
+            position: fixed;
+            z-index: 1050;
+            transition: opacity .15s linear;
+            top: 0;
+            left: 0;
+            height: 100vw;
+            width: 100vh;
+            opacity: 0;
+            background-color: #000;
+        }
+    }
+}
+
+
+
+// global button
+.profileBtn {
+    background-color: $theme-dark;
+    color: $textClr;
+    border-radius: 9px;
+    padding: 12px 16px 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    // line-height: 19px;
+    & .tabIcon {
+        height: 26px;
+        width: 26px;
+    }
+    & .rightArrow {
+        height: 18px;
+        width: 7px;
+    }
+}
+
+// heading all page
+.innerheader {
+    & .title {
+        font-size: 22px;
+        color :var(--text-Clr);
+    }
+}
+
+// switch all
+.switchMain {
+    & .switchLable {
+        font-size: 13px;
+    }
+    & .switchInput {
+        height: 20px;
+        width: 40px;
+        // background: lighten($black, 10);
+        background-image: url(../img/svg/switchicon.svg);
+        background-size: 18px 18px;
+        background-color: $bodyBg;
+        background-position-y: center;
+        background-repeat: no-repeat;
+    }
+}
+
+// star icon 
+.starIcon {
+    height: 17px;
+    width: 15px;
+}
+
+// check button all
+.checkBtn {
+    height: 20px;
+    min-width: 20px;
+    background-color: transparent;
+    border: 1px solid $dark-border;
+    margin: 0;
+    box-shadow: none;
+    &:focus {
+        border-color: $dark-border;
+    }
+    &:checked {
+        background-color: $theme-blue;
+        background-image: url(../img/svg/checkIcon.svg);
+        background-size: 12px 10px;
+        border-color: $theme-blue;
+    }
+    &:checked ~ label {
+        color: $theme-blue;
+    }
+}
+
+// filter all
+.filterall {
+    font-size: 16px;
+    color: $textClr;
+    font-weight: 400;
+    & .filterImgs {
+        gap: 1px;
+        & .filterIcons {
+            height: 8px;
+            width: 9px;
+        }
+    }
+}
+ .dletedBtn{
+    font-size: 16px;
+    font-weight: 700;
+    background-color: $theme-red;
+    color: var(--text-Clr);
+    padding: 11px 82px;
+    & .filterImgs {
+        gap: 1px;
+        & .filterIcons {
+            height: 8px;
+            width: 9px;
+        }
+    }
+}
+
+
+// search box
+.search-wrapper {
+    & .input-holder {    
+        height: 36px;
+        width:100%;
+        background: transparent;
+        border-radius:6px;
+        transition: all 0.3s ease-in-out;
+        // padding-left: 10px;
+        & .search-input {
+            height: 36px;
+            padding:0px 20px 0 45px;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            outline: 0;
+            top:0px;
+            left:0px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            color:$text-gray;
+            // transition: all 0.3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+            transition: all 0.3s ease-in-out;
+            // transition-delay: 0.2s;
+            &::placeholder {
+            color:$text-gray;
+            font-size: 16px;
+            }
+        }
+        & .search-icon {
+            width:25px;
+            height:25px;
+            outline:none;
+            z-index: 2;
+            cursor: pointer;
+            right: 0;
+            transition: all 0.3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+            & img {
+                transition: all 0.3s ease-in-out;
+                // filter: brightness(10);
+            }
+            & span {
+                transition: all .3s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+            }
+        }
+    }
+    &.active {
+        & .input-holder {
+            width:100%;
+            border-radius: 40px;
+            background: $bodyBg;
+            transition: all 0.3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+            // transition: all 0.3s ease-in-out;
+            & .search-input {
+                opacity: 1;
+                visibility: visible;
+            }
+            & .search-icon {
+                left: 10px;
+                // & img {
+                //     filter: none;
+                // }
+            }
+        }
+    }
+}
+// .search-wrapper {
+//     &.active {
+//         & .input-holder {
+//             width:100%;
+//             border-radius: 40px;
+//             background: $bodyBg;
+//             transition: all 0.3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+//             // transition: all 0.3s ease-in-out;
+//             & .search-input {
+//                 opacity: 1;
+//                 visibility: visible;
+//             }
+//             & .search-icon {
+//                 left: 10px;
+//                 & img {
+//                     filter: none;
+//             }
+//             }
+//         }
+//     }
+// }
+
+// .search-wrapper.active .input-holder  {
+    
+// }
+// .search-wrapper.active .input-holder .search-icon {
+//     left: 10px;
+//     & img {
+//         filter: none;
+//     }
+// }
+
+// .searchgroup {
+//     background-color: $bodyBg;
+//     display: none;
+//     transition: all 0.3s ease-in-out;
+//     & .searchInput {
+//         font-size: 16px;
+//         color: $text-gray;
+//         &::placeholder {
+//             font-size: 16px;
+//             color: $text-gray;
+//         }
+//     }
+// }
+// .searchbox {
+//     position: relative;
+//     min-width: 40px;
+//     width: 0%;
+//     overflow: hidden;
+//     border-radius: 50%;
+//     -webkit-transition: 0.3s;
+//     -moz-transition: 0.3s;
+//     -ms-transition: 0.3s;
+//     -o-transition: 0.3s;
+//     transition: 0.3s;
+// }
+// .searchbox-input {
+//     top: 0;
+//     left: 0;
+//     border: 0;
+//     outline: 0;
+//     background: transparent;
+//     width: 100%;
+//     height: 40px;
+//     margin: 0;
+//     padding-left: 40px;
+//     font-size: 16px;
+//     color: $text-gray;
+//     &:focus {
+//         background: $bodyBg;
+//         color: $text-gray;
+//     }
+//     &::placeholder {
+//         font-size: 16px;
+//         color: $text-gray;
+//     }
+// }
+// .searchbox-icon {
+//     width: 40px;
+//     height: 40px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     position: absolute;
+//     top: 0;
+//     font-size: 22px;
+//     left: 0;
+//     padding: 0;
+//     margin: 0;
+//     border: 0;
+//     outline: 0;
+//     // line-height: 50px;
+//     cursor: pointer;
+//     background-color:transparent;
+//     // border-radius: 50%;
+//     filter: brightness(1);
+// }
+// .searchbox-open {
+//     width: 100%;
+//     height: 40px;
+//     border-radius: 40px;
+// }
+
+// select all 
+// .selectFilter {
+//     font-size: 16px;
+//     color: $textClr;
+//     appearance: none;
+//     -moz-appearance: none;
+//     -webkit-appearance: none;
+//     background-image: url(../img/svg/filter.svg);
+//     padding-right: 16px;
+//     background-repeat: no-repeat ;
+//     background-position: right center;
+//     &:focus-visible {
+//         border: 0;
+//         outline: none;
+//     }
+//     & option {
+//         font-size: 16px;
+//         background:$bodyBg ;
+//         color: $textClr;
+//         // padding: 10px 15px;
+//         height: 10px;
+//         width: 30px;
+//     }
+// }
+
+// buy button all
+.tabelebuyBtn {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    background-color:$theme-green ;
+    padding: 3px 20px;
+    border-radius: 5px;
+}
+
+// filter offcnavas  start
+.filterOffcanvas {
+    min-height: 220px;
+    & .offcanvas-header {
+        background-color: $bodyBg;
+        & .offcanvas-title {
+            font-size: 18px;
+            color: $textClr;
+            font-weight: 400;
+        }
+        & .offcanvasIcon {
+            height: 28px;
+            width: 28px;
+        }
+        & .btn-close {
+            opacity: 1;
+            background: none;
+        }
+    }
+    & .offcanvas-body {
+        background: $theme-dark;
+        & .filtermain {
+            border-bottom: 1px solid $dark-border;
+            & .filterall {
+                padding: 10px 0 10px 20px;
+                transition: all 0.3s ease-in-out;
+                & .filterIconTheme {
+                    & img {
+                        filter: brightness(10);
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                &:hover {
+                    color: $theme-blue;
+                    & img {
+                        filter: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offcanvas-backdrop {
+    // background-color: rgba($light-bg, 0.4);
+    background-color:$light-bg;
+    opacity: 0.7;
+}
+
+.modalContent {
+    background-color: $bodyBg;
+}
+// filter offcnavas  end
+
+// filter drop down
+.currancyDrop {
+    & .currancyDropbtn {
+        background: $bodyBg;
+        color: $theme-blue;
+        font-size: 12px;
+        padding: 5px 26px 5px 12px;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            transform: translateY(-50%);
+            right:8px;
+            height: 6px;
+            width: 13px;
+            background: url(../img/svg/dropdown.svg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+    }
+    & .currancymenu {
+        min-width: auto;
+        background-color: $theme-dark;
+        & .currancy {
+            font-size: 10px;
+            color: $text-gray;
+            padding: 10px 32px 10px 10px;
+            border-top: 1px solid $dark-border;
+            &:hover {
+                background: none;
+            }
+        }
+    }
+    &.currancyDroptwo {
+        & .currancyDropbtn {
+            font-weight: 700;
+            font-size: 10px;
+            background: $theme-dark;
+            padding:8px 3px;
+            &::after {
+                content: none;
+                // background: none;
+            }
+        }
+        & .currancymenu {
+            & .currancy{
+                font-size: 10px;
+                padding: 6px 4px;
+            }
+        }
+    }
+}
+
+.modalContent {
+    background-color: $bodyBg;
+}
+
+// accordion button all
+.accordioncontent {
+    & .accordionBtn {
+        background: $theme-dark;
+        color: $textClr;
+        font-size: 16px;
+        font-weight: 400;
+        &::after {
+            content: '';
+            position: absolute;
+            background: url(../img/svg/accordionicon.svg) no-repeat;
+            right: 15px;
+            top: 32%;
+            background-position: center;
+        }
+    }
+}
+
+// apply button 
+.applyBtn {
+    font-size: 14px;
+    color: white;
+    padding: 9px 67px;
+    border-radius: 5px;
+    background: $theme-blue;
+}
+// opt input all
+.otpInputMain  {
+    & .optInput {
+        max-width: 40px;
+        height: 40px;
+        border: 1px solid $dark-border;
+        font-size: 16px;
+        color: $textClr;
+        aspect-ratio: 5/5;
+        padding-left: 14px;
+        &:-webkit-autofill {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: $textClr;
+            transition: background-color 5000s ease-in-out 0s;
+            // box-shadow: inset 0 0 20px 20px #23232329;
+        }
+        &:focus-visible {
+            border: 2px solid $theme-blue;
+        }
+    }
+}
+// navbar plus button
+.plusBtn {
+    background-color: $theme-dark;
+    font-size: 20px;
+    font-weight: 600;
+    color: $theme-blue;
+    height: 23px;
+    width: 23px;
+}
+
+// border line
+.bordereline {
+    background: $dark-border;
+    height: 1px;
+    opacity: 1;
+    width: 92%;
+}
+
+// search bar two
+.searchform {
+    height:33px;
+    & .serachIcon {
+        height: 15px;
+        width: 15px;
+    }
+    & .serachIn {
+        width: 100%;
+        height: 100%;
+        color: $text-gray;
+        font-size: 16px;
+        &::placeholder {
+            font-size: 16px;
+            color: $text-gray;
+        }
+    }
+    & .labelSearch {
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            border-bottom: 3px solid transparent;
+            transform: translateX(-100%);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    & input:focus + .labelSearch::after,
+    & input:valid + .labelSearch::after {
+        transform: translateX(0%);
+        border-color: $theme-blue;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// trade button 
+.tradeButton {
+    font-size: 16px;
+    font-weight: 700;
+    background-color: $theme-dark;
+    color: $textClr;
+    transition: all 0.3s ease-in-out;
+    padding: 7px 0;
+    &:hover {
+        background-color: $theme-blue;
+        color: white;
+    }
+}
+
+
+
+// profile page start
+.profile {
+    & .innerheader {
+        & .title {
+            font-size: 22px;
+        }
+    }
+    & .profileTabs {
+        gap: 10px;
+        // & .profileBtn {
+        //     background-color: #1D1D1D;
+        //     border-radius: 9px;
+        //     padding: 12px 16px 12px 16px;
+        //     & .tabIcon {
+        //         height: 26px;
+        //         width: 26px;
+        //     }
+        //     font-size: 16px;
+        //     // line-height: 19px;
+        //     color: $white;
+        //     & .rightArrow {
+        //         height: 18px;
+        //         width: 7px;
+        //     }
+        // }
+        & .refferalBtn {
+            & .referralContent {
+                padding-top: 2px;
+                padding-left: 40px;
+                & .referralTitle {
+                    font-size: 12px;
+                    color:$textClr;
+                    & .referralcode {
+                        padding-left: 2px;
+                    }
+                }
+                & .copyIcon {
+                    height: 12px;
+                    width: 16px;
+                }
+                & .shareBtn {
+                    font-size: 14px;
+                    color: $theme-blue;
+                }
+            }
+        }
+        & .aboutusBtn {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 42%;
+                right: 16px;
+                height: 7px;
+                width: 14px;
+                background: url(../img/svg/accordionicon.svg) no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            &:not(.collapsed) {
+                border-radius: 10px 10px 0 0;
+                background-color: $theme-dark;
+                color: $textClr;
+            }
+        }
+        & .accordion-collapse {
+            & .accordion-body {
+                background-color: $theme-dark;
+                border-radius: 0px 0px 10px 10px;
+                & .aboutBtncontent {
+                    padding: 20px 10px 10px 58px;
+                    border-bottom: 1px solid $dark-border;
+                    & .aboutHeading {
+                        font-size: 13px;
+                        color: $textClr;
+                    }
+                    & .aboutDetail {
+                        font-size: 10px;
+                        line-height: 11px;
+                        color: $textClr;
+                        padding-top: 6px;
+                    }
+                    & .moreinfo {
+                        font-size: 8px;
+                        color: $theme-blue;
+                        padding-top: 3px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+// profile page end
+
+// setting page start 
+.Setting {
+    & .settingtab {
+        gap: 10px;
+        // & .currancySelect {
+        //     background: $bodyBg;
+        //     background-image: url(../img/svg/dropdown.svg);
+        //     color: $theme1;
+        //     font-size: 12px;
+        //     padding: 5px 26px 5px 12px;
+        //     background-repeat: no-repeat;
+        //     background-position: right center;
+        //     background-position-x: 50px;
+        //     // &::before {
+        //     //     content: '';
+        //     //     position: absolute;
+        //     //     top: 50%;
+        //     //     right: 8px;
+        //     //     height: 7px;
+        //     //     width: 14px;
+        //     //     transform: translateY(-50%);
+        //     //     background: url(../img/svg/dropdown.svg) no-repeat;
+        //     //     background-size: cover;
+        //     //     background-position: center;
+        //     // }
+        //     & .currancyOption {
+        //         background: $theme-dark;
+        //         border: 0;
+        //         color: $text-gray;
+        //         &:hover {
+        //             background: lighten($black, 40);
+        //         }
+        //     }
+        // }
+    }
+    & .autosaveMain {
+        background-color: $theme-dark;
+        border-radius: 9px;
+        & .autosaveRange {
+            width: 80%;
+            & .saveInput {
+                height: 2px;
+                background-color: $dark-border;
+                -webkit-appearance: none;
+                &::after {
+                    content: '';
+                    top: 50%;
+                    background-color: $theme-blue;
+                    position: absolute;
+                    right: 0;
+                    height: 6px;
+                    width: 6px;
+                    border-radius: 50%;
+                    transform: translateY(-50%);
+                }
+                &::before {
+                    content: '';
+                    top: 50%;
+                    background-color: $theme-blue;
+                    position: absolute;
+                    left: 0;
+                    height: 6px;
+                    width: 6px;
+                    border-radius: 50%;
+                    transform: translateY(-50%);
+                }
+                &::-webkit-slider-thumb {
+                    width: 15px;
+                    -webkit-appearance: none;
+                    height: 15px;
+                    cursor: pointer;
+                    background: $theme-blue;
+                    border-radius: 50%;
+                    // box-shadow: -80px 0 0 80px #43e5f7;
+                }
+            }
+            & .stepcount {
+                font-size: 10px;
+                color: $textClr;
+            }
+        }
+    }
+}
+// setting page end 
+
+// market management page start
+.marketmanag {
+    & .innerheader {
+        & .apply {
+            font-size: 16px;
+            color: $theme1;
+        }
+    }
+    & .coinTab {
+        background-color: $theme-dark;
+        & .coinLink {
+            font-size: 14px;
+            font-weight: 700;
+            width: 116px;
+            color: $text-gray;
+            transition: all 0.3s ease-in-out;
+            &.active {
+            background:$theme-blue ;
+            color: white;
+            }
+        }
+    }
+    & .coinTabContent {
+        & .tabfilter {
+            background-color: $theme-dark;
+            border-radius: 10px 10px 0px 0px;
+            padding: 8px 22px 8px 19px;
+            // & .input-group {
+            //     background-color: $bodyBg;
+            //     & .searchInput {
+            //         font-size: 16px;
+            //         color: $text-gray;
+            //         &::placeholder {
+            //             font-size: 16px;
+            //             color: $text-gray;
+            //         }
+            //     }
+            // }
+        }
+        & .tabContentMain {
+            // background-color: $theme-dark;
+            border-radius: 0px 0px 10px 10px;
+            & .marketlabelmain {
+                padding-right: 22px;
+                border-bottom: 1px solid $dark-border;
+                & .marketlabel {
+                    font-size: 16px;
+                    padding: 14px 0 14px 19px;
+                    color: $textClr;
+                    & .marketLabelIcon {
+                        height: 26px;
+                        width: 26px;
+                    }
+                    & .coinName {
+                        font-size: 12px;
+                        color:$light-bg;
+                    }
+                }
+            }
+        }
+    }
+}
+// market management page end
+
+// welcomev page start
+.welcomeSection {
+    & .welcomelogo {
+        height: 111px;
+        width: 296px;
+    }
+    & .welcometitle {
+        font-size: 36px;
+        line-height: normal;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        color: $textClr;
+    }
+    & .dontAccount {
+        font-size: 16px;
+        color: $textClr;
+        & .dontbtn {
+            color: $theme-blue;
+            font-size: 14px;
+        }
+    }
+    & .skipbtn {
+        font-size: 14px;
+        color: $theme-blue;
+    }
+}
+// welcomev page end
+
+// price page start
+.price {
+    // & .innerheader {
+    //     & .userPrice {
+    //         padding: 6px;
+    //     }
+    // }
+    & .priceCurrancy {
+        font-size: 10px;
+        color: $theme-blue;
+        background: $theme-dark;
+        padding: 10px 4px;
+    }
+    & .pricetab {
+        background:$theme-dark;
+        padding: 4px;
+        & .pricetaBtn {
+            width: 116px;
+            font-size: 14px;
+            color: $text-gray;
+            padding: 6px 0;
+            font-weight: 700;
+            &.active {
+                background:$theme-green ;
+                color: white;
+            }
+        }
+        & .bestsellBtn {
+            &.active {
+                background:$theme-red;
+                color: white;
+            }
+        }
+    }
+    & .priceTable {
+        border-collapse: separate;
+        border-spacing: 0 10px;
+        & .tablerow {
+            & th, td {
+                background: $theme-dark;
+            }
+            // & td {
+            //     background: $theme-dark;
+            // }
+        }
+        & .tableData {
+            & .tableCard {
+                & .tableIcon {
+                    height: 31px;
+                    width: 31px;
+                }
+                & .tablecoin {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $textClr;
+                }
+                & .tablecoinName {
+                    font-size: 12px;
+                    color: $theme-blue;
+                }
+                & .coinrate {
+                    font-size: 14px;
+                    color: $textClr;
+                }
+                & .coinratetwo {
+                    font-size: 10px;
+                    color: $textClr;
+                }
+                & .cointile {
+                    font-size: 14px;
+                    color: $textClr;
+                }
+            }
+        }
+        & .pricetableHead {
+            font-size: 11px;
+            color: $textClr;
+            // & .selectFilter {
+            //     font-size: 11px;
+            //     color: $textClr;
+            //     & option {
+            //         font-size: 11px;
+            //         color: $textClr;
+            //     }
+            // }
+            & .filterall {
+                font-size: 11px;
+                & .filterIcons {
+                    height: 5px;
+                    width: 6px;
+                }
+            }
+        }
+        & .tableIcon {
+
+        }
+    }
+    & .bestsellContent {
+        & .tabelebuyBtn {
+            background: $theme-red;
+        }
+    }
+}
+// price page end
+
+// filter modal start
+.filterModal {
+    // background: rgba($textClr, 0.5);
+    // background-color:rgba($textClr, 0.9);
+    &::before {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        content: "";
+        background-color: var(--text-Clr);
+        opacity: .5;
+        inset: 0;
+    }
+    & .filterModalMain {
+        max-width: 350px;
+        & .filtercontent {
+            background: $theme-dark;
+            & .btn-close {
+                background: none;
+                opacity: 1;
+            }
+            & .filtermodalIcon {
+                height: 53px;
+                width: 53px;
+            }
+            & .filterTitle {
+                font-size: 18px;
+                font-weight: 500;
+                color: $textClr;
+            }
+            & .filterBtn {
+                font-size: 16px;
+                font-weight: 700;
+                background-color: $theme-blue;
+                color: white;
+                padding: 11px 82px;
+            }
+        }
+    }
+    &.alertmodal {
+        & .filterModalMain {
+            & .filtercontent {
+                & .filterBtn {
+                    background: $theme-green;
+                    padding: 8px 108px;
+                    &.sell {
+                        background: $theme-red;
+                    }
+                }
+            }
+        }
+    }
+}
+// filter modal end
+
+// price detail page start
+.priceDetail {
+    & .priceDetailCard {
+        padding: 15px 15px 25px 8px;
+        background: $theme-dark;
+        & .cardicon {
+            height: 24px;
+            width: 24px;
+        }
+        & .cardTitle {
+            font-size: 18px;
+            color: $textClr;
+            line-height: normal;
+        }
+        & .pricevalue {
+            font-size: 20px;
+            color: $textClr;
+        }
+        & .priceTitle {
+            font-size: 12px;
+            color: $light-bg;
+        }
+    }
+    & .comparePrice {
+        font-size: 16px;
+        color: $textClr;
+    }
+    & .pricedetailTable {
+        background: $theme-dark;
+        // border-collapse: separate;
+        // border-spacing: 0 15px;
+        & .pricedetailHead {
+            border-bottom: 1px solid $dark-border;
+            & .filterall {
+                font-size: 11px;
+                & .filterImgs {
+                    & .filterIcons {
+                        height: 5px;
+                        width: 6px;
+                    }
+                }
+            }
+            & th {
+                font-size: 11px;
+                color: $textClr;
+            }
+        }
+        & .priceDetalbody {
+            & .detailRow {
+                border: 1px solid transparent;
+                border-bottom: 1px solid $dark-border;
+                // transition: all 0.3s ease-in-out;
+                &:hover {
+                    border: 1px solid $theme-blue;
+                }
+                & .detailtabletitle {
+                    font-size: 16px;
+                    color: $textClr;
+                    & .detailtableIcon {
+                        height: 24px;
+                        width: 24px;
+                    }
+                }
+                & .detailtableprice {
+                    font-size: 14px;
+                    color: $textClr;
+                }
+                & .detailpricetwo {
+                    font-size: 10px;
+                    // color: rgba($textClr, 0.8);
+                    color: $textClr;
+                }
+                & .tradeNowBtn {
+                    font-size: 12px;
+                    font-weight: 700;
+                    background: $theme-blue;
+                    padding: 5px 6px;
+                    color: white;
+                    border-radius: 5px;
+                }
+            }
+            & .detailRowone {
+                border-top: 1px solid $dark-border;
+            }
+        }
+    }
+}
+// price detail page end
+
+// price search page start
+.priceSearch {
+    & .inputradioMain {
+        background-color: $theme-dark;
+        & .radiobuy {
+            border: 1px solid $dark-border;
+            background:none;
+            height: 20px;
+            width: 20px;
+            &:checked {
+                background: url(../img/svg/radio.svg) no-repeat;
+                border-color: $theme-blue;
+                background-position: center;
+                &~ label {
+                    color: $theme-blue;
+                }
+            }
+        }
+        & .labelbuy {
+            font-size: 16px;
+            color: $text-gray;
+            padding-top: 2px;
+        }
+    }
+}
+// price search page end
+
+// select coin section start
+.selectCoin {
+    & .coinTabContent {
+        & .tabfilter {
+            background-color: $theme-dark;
+        }
+        & .tabContentMain {
+            background-color: $theme-dark;
+        }
+    }
+}
+// select coin section end
+
+// index page start
+.indexSection {
+    & .search-wrapper {
+        &.active {
+
+            & .input-holder {
+                background-color: $theme-dark;
+            }
+        }
+    }
+}
+// index page end
+
+// arbitrage search page start
+.arbitrageSearch {
+    & .indexMainPage{
+        & .form{
+            & .cards{
+                & .inputgroup{
+                    & .formInput{
+                        color: $text-gray;
+                        font-size: 16px;
+                    }
+                    & .inputgroupText{
+                        & .passwordText{
+                            & .formSelect{
+                                font-size: 12px;
+                                color: $theme-blue;
+                                & option{
+                                    background: $theme-dark;
+                                    border: none;
+                                    &:hover{
+                                        border: none;
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .inputgroupText {
+        color: $text-gray;
+        font-size: 24px;
+    }
+}
+// arbitrage search page end
+
+// arbitrage detail page start
+.arbitrageDetail {
+    & .arbitrageInner {
+        & .cardd {
+            background: $theme-dark;
+            padding:  29px 0;
+            & .carddTitle {
+                font-size: 18px;
+                color: $textClr;
+                & .btcIcon {
+                    height: 36px;
+                    width: 36px;
+                }
+            }
+        }
+        & .arbitrageInnerHeader {
+            background-color: $theme-dark;
+            padding: 13px 0;
+            & .arbitrageInnerHeading {
+                font-size: 15px;
+                color: $textClr;
+                font-weight: 700;
+                & .arbitrageInnerIcon {
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+        & .arbitrageContent {
+            background-color: $theme-dark;
+            margin-top: 3px;
+            & .arbitrageContentInner {
+                border-bottom: 1px solid $dark-border;
+                & .arbitrageContentTitle {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: $textClr;
+                    & .profit {
+                        font-size: 10px;
+                    }
+                }
+                & .arbitragePrice {
+                    font-size: 16px;
+                    color: $textClr;
+                }
+                & .dotsMain {
+                    & .dots {
+                        height: 8px;
+                        width: 8px;
+                        background-color: $text-gray;
+                        &.active {
+                            background-color: $theme-blue;
+                        }
+                        &.halfActive{
+                            background-image: linear-gradient(90deg, $theme-blue 50%, $text-gray 50%)
+                        }
+                    }
+                }
+                & .sellBtn {
+                    background-color: $theme-red;
+                }
+            }
+        }
+    }
+}
+// arbitrage detail page end
+
+// portfolio page start
+.portfolio {
+    & .portfolioContent {
+        & .portfolioCard {
+            background-color: $theme-dark;
+            & .portcardTitle {
+                font-size: 14px;
+                color: $text-gray;
+            }
+            & .portcardPrice {
+                font-size: 14px;
+                color: $textClr;
+            }
+            & .portfolioCardInner {
+                border-right: 1px solid $theme-blue;
+            }
+            & .cardValue {
+                font-size: 10px;
+                color: $theme-green;
+                padding-top: 2px;
+                & .increaseIcon {
+                    width: 12px;
+                    height: 7px;
+                }
+            }
+        }
+        & .myAssetsHeading {
+            font-size: 15px;
+            color: $textClr;
+            background-color: $theme-dark;
+        }
+        & .myAssetsCard {
+            background-color: $theme-dark;
+            & .MoreIcon {
+                height: 18px;
+                width: 7px;
+            }
+            & .btcBitcoin {
+                background-color: $bodyBg;
+                padding: 12px;
+                &::before {
+                    content:'';
+                    position: absolute;
+                    top: 50%;
+                    right: 13px;
+                    height: 6px;
+                    width: 13px;
+                    background: url(../img/svg/accordionicon.svg) no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+                & .btcBitcoinIcon {
+                    height: 29px;
+                    width: 29px;
+                }
+                & .btcBitcoinHeading {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $textClr;
+                    & .btcBitcointitle {
+                        font-size: 12px;
+                        color: $theme-blue;
+                        font-weight: 400;
+                    }
+                }
+                & .totalQuality {
+                    font-size: 8px;
+                    color: $light-bg;
+                    padding-left: 3px;
+                    // color: rgba($textClr, 0.6);
+                    & span {
+                        color: $textClr;
+                    }
+                }
+            }
+            & .totalCurrancyVal {
+                font-size: 14px;
+                color: $textClr;
+                & span {
+                    font-size: 8px;
+                    color: $light-bg;
+                }
+            }
+            & .curranDrop {
+                padding-left: 13px;
+                & .dropdown-toggle {
+                    font-size: 10px;
+                    color: $textClr;
+                    background: none;
+                    &::after {
+                        position: absolute;
+                        left: 0;
+                        top: 45%;
+                        font-size: 13px;
+                    }
+                }
+                & .dropdown-menu {
+                    min-width: auto;
+                    & .dropdown-item {
+                        font-size: 10px;
+                        display: inline;
+                    }
+                }
+            }
+            & .detailHeading {
+                font-size: 15px;
+                color: $textClr;
+                font-weight: 500;
+                background-color: $bodyBg;
+            }
+            & .totalInverstmenttitle {
+                font-size: 12px;
+                color: $light-bg;
+            }
+            & .totalInverstment {
+                font-size: 14px;
+                color: $textClr;
+            }
+        }
+        & .myAssetsCardInner {
+            & .editdeleteIcon {
+                height: 14px;
+                width: 14px;
+            }
+            & .btcBitcoin {
+                background:none;
+                padding: 0;
+                padding-left: 8px;
+                &::before {
+                    content: none;
+                }
+            }
+            & .tradenowtitle {
+                font-size: 10px;
+                color: $theme-blue;
+            }
+            & .tradeNow {
+                font-size: 8px;
+                color: $textClr;
+                padding-left: 2px;
+            }
+            & .btcBitcoinprice {
+                font-size: 10px;
+                color: $light-bg;
+                padding-top: 2px;
+            }
+        }
+    }
+    
+}
+// portfolio page end
+
+// create portfolio page start
+.createPortfolio {
+    & .inputgroupText {
+        font-size: 10px;
+        color: $text-gray;
+    }
+    & .currancyDrop {
+        & .currancyDropbtn {
+            font-size: 10px;
+            background: transparent;
+        }
+    }
+}
+// create portfolio page end
+
+// alert page start
+.alertPage {
+    & .alertTab {
+        background-color: $theme-dark;
+        & .alertbtn {
+            font-size:14px ;
+            width: 116px;
+            font-weight: 700;
+            color: $text-gray;
+            &.active {
+                background-color: $theme-blue;
+                color: white;
+            }
+        }
+    }
+    & .PriceAccordion {
+        & .activeAlertBtn {
+            background: $theme-dark;
+            font-size: 16px;
+            color: $text-gray;
+            border-radius: 8px;
+            &::after {
+                background: url(../img/svg/accordionicon.svg) no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 9px;
+                width: 16px;
+            }
+            &:not(.collapsed) {
+                color: $textClr;
+                border-radius: 8px 8px 0 0;
+            }
+        }
+        & .activeAlertHeader {
+            margin-top: 2px;
+            background-color: $theme-dark;
+            & .AlertheaderTitle {
+                font-size: 11px;
+                color: $textClr;
+                line-height: normal;
+            }
+        }
+        & .activeAlertCard {
+            background-color: $theme-dark;
+            & .buyAlert {
+                font-size: 8px;
+                color: $textClr;
+                background: $theme-green;
+                padding: 4px 22px;
+                &.sellAlert {
+                    background: $theme-red;
+                }
+            }
+            & .editIcon {
+                height: 14px;
+                width: 14px;
+            }
+            & .timedate {
+                font-size: 9px;
+                color: $light-bg;
+            }
+            & .alertCoinIcon {
+                height: 30px;
+                width: 30px;
+            }
+            & .alertCoinName {
+                font-size: 16px;
+                color: $textClr;
+            }
+            & .alertCoinTitle {
+                font-size: 10px;
+                color: $textClr;
+                margin: 2px;
+            }
+            & .alertCoinPrice {
+                font-size: 14px;
+                color: $textClr;
+            }
+            & .alertCoin {
+                font-size: 12px;
+                color: $textClr;
+                margin-top: 2px;
+                & .tradeNow {
+                    font-size: 8px;
+                    color: $theme-blue;
+                }
+            }
+            & .tradeImg {
+                height: 10px;
+                width: 19px;
+                margin-top: 4px;
+            }
+            & .buyfrom {
+                font-size: 12px;
+                color: $light-bg;
+            }
+            & .arbitragercoiname {
+                font-size: 12px;
+                color: $textClr;
+            }
+        }
+    }
+}
+// alert page end
+
+// set price alert page start
+.setpriceAlert {
+    & .currentprice {
+        font-size: 15px;
+        color: $text-gray;
+        font-weight: 500;
+    }
+    & .currentpriceTotal {
+        min-width: 46px;
+        border-bottom: 1px solid $dark-border;
+    }
+    & .applyBtn {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    // & .currentpriceUsdt {
+    //     font-size: 15px;
+    //     color: $textClr;
+    // }
+}
+// set price alert page end
+
+// exchange detail page start
+.exchangeDetail {
+    & .exchangeDetailCard {
+        background-color: $theme-dark;
+        & .exchangeDetailIcon {
+            height:37px ;
+            width: 37px;
+        }
+        & .exchangeDetailHeading {
+            font-size: 18px;
+            color: $textClr;
+        }
+        & .exchangeDetailPrice {
+            font-size: 20px;
+            color: $textClr;
+            margin-top: 13px;
+        }
+        & .exchangeDetailTime {
+            font-size: 10px;
+            color: $light-bg;
+        }
+        & .scoreTitle {
+            font-size: 12px;
+            color: $textClr;
+            & .score {
+                font-weight: 700;
+            }
+        }
+    }
+    & .exchangeDetailInener {
+        background: $theme-dark;
+    }
+    & .exchangeDetailText {
+        font-size: 10px;
+        font-weight: 400;
+        color: $textClr;
+    }
+    & .rightcarrow {
+        width: 9px;
+        height: 8px;
+    }
+    & .exchangeDetailCoin {
+        font-size: 10px;
+        color: $light-bg;
+    }
+    & .exchangeDetailSeachMain {
+        background-color: $theme-dark;
+        & .usdtSelect {
+            font-size: 12px;
+            color: $theme-blue;
+        }
+    }
+    & .pricedetailTable {
+        & .pricedetailHead {
+            & th {
+                font-size: 14px;
+            }
+            & .filterall {
+                font-size: 14px;
+                & .filterImgs {
+                    & .filterIcons {
+                        height: 8px;
+                        width: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+// exchange detail page end
+
+// converter page start
+.converter {
+    & .selectExchange {
+        background-color: $theme-dark;
+        padding: 2px;
+        padding-left: 13px;
+        & .selectExchangeHeading {
+            font-size: 12px;
+            color: $light-bg;
+            border-bottom: 1px solid $light-bg;
+        }
+    }
+    & .converterCard {
+        background-color: $theme-dark;
+        & .converterCoincontent {
+            border-bottom: 1px solid $light-bg;
+            padding:0 35px 6px 2px;
+            & .convertercoinIcon {
+                height: 22px;
+                width: 22px;
+                & img {
+                    opacity: 0.5;
+                }
+            }
+            & .convertercoinName {
+                font-size: 16px;
+                color: $light-bg;
+            }
+        }
+        & .totalBitcoin {
+            font-size: 20px;
+            color: $light-bg;
+        }
+        & .bitcoin {
+            font-size: 12px;
+            color: $light-bg;
+        }
+        & .converterBtn {
+            background-color: $theme-blue;
+            padding: 6px 0;
+            & .converterIcon {
+                width: 14px;
+                height: 20px;
+            }
+        }
+    }
+}
+// converter page end
+
+// compare Exchange page start
+.compareExchange {
+    & .compareExchangeTable {
+        background-color: $theme-dark;
+        & .comparetableHeader {
+            border-bottom: 2px solid $bodyBg;
+            // & tr {
+            //     & th {
+            //         &:nth-child(1) {
+            //             border-top-left-radius: 10px;
+            //         }
+            //         &:nth-child(3) {
+            //             border-top-right-radius: 10px;
+            //         }
+            //     }
+            // }
+            & .tableHeading {
+                font-size: 15px;
+                color: $textClr;
+                font-weight: 700;
+                & .tableCoinIcon {
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+        }
+        & .comparetableBody {
+            background-color: $theme-dark;
+            & .bordertable {
+                border-bottom: 1px solid $dark-border;
+            }
+            & .tableTitle {
+                font-size: 14px;
+                font-weight: 700;
+                color: $textClr;
+            }
+            & .rankcount {
+                font-size: 16px;
+                color: $textClr;
+            }
+            & .ratingIcon {
+                height: 12px;
+                width: 12px;
+            }
+            & .tablecontent {
+                font-size: 12px;
+                color: $textClr;
+            }
+            & .rightIcon {
+                width: 12px;
+                height: 10px;
+            }
+            & .wrongIcon {
+                height: 11px;
+                width: 10px;
+            }
+            & .countryName {
+                font-size: 14px;
+                color: $textClr;
+            }
+            & .openexchangeBtn {
+                font-size:12px ;
+                font-weight: 700;
+                color:white ;
+                background-color:$theme-blue ;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+// compare Exchange page end
+
+// news page start
+.newsPage {
+    & .newsTab {
+        & .newsBtn {
+            font-size: 16px;
+            color: $light-bg;
+            &.active {
+                color: $theme-blue;
+            }
+        }
+    }
+}
+
+.newsSection{
+    // padding: 5px 16px !important;
+    & .outterCard{
+        background-color: $theme-dark;
+        border-radius:5px;
+        padding: 12px 0px;
+        & .newsImg {
+            width: 98px;
+            height: 78px;
+            overflow: hidden;
+            border-radius: 8px;
+            & img {
+                object-fit: cover;
+            }
+        }
+        & .newsTextCol {
+            width: calc(100% - 122px);
+        }
+        & .heading{
+            color: $textClr;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        & .subHeading{
+            color:$light-bg;
+            font-size: 7px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: end;
+        }
+        & .pera{
+            color:$textClr;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            & p {
+                margin: 0 !important;
+            }
+            & a {
+                color: $textClr !important;
+            }
+        }
+        & .newspageBtn {
+            font-size:7px ;
+            color: $light-bg;
+        }
+    }
+}
+// news page end
+
+// news detail page start
+.newsDetailPage {
+    & .newsdetailImg {
+        
+    }
+    & .newsHeading {
+        font-size: 22px;
+        font-weight: 600;
+        color: $textClr;
+    }
+    & .newspara {
+        font-size: 14px;
+        color: $textClr;
+    }
+    & .newstitle {
+        font-size: 14px;
+        color: $textClr;
+        font-weight: 700;
+    }
+}
+// news detail page end
+
+// slider start
+.homeslider{
+    // padding-bottom: 55px;
+    & .sliderContent{
+        & .owlImg{
+            width: 62px;
+            height: 62px;
+            background-color: $theme-dark;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        & .pera{
+            color:$textClr;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+    & .swiper-pagination {
+        & .swiper-pagination-bullet{
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color:$text-gray;
+            &.swiper-pagination-bullet-active{
+                background-color:$theme-blue;
+            }
+        }
+    }
+}
+
+
+.heroSlider {
+    .swiper-slide {
+        // &.swiper-slide-active {
+        //     box-shadow:  0px 0px 8px 0px rgba($theme1, 0.5);
+        //     z-index: 1;
+        //     transform: scale(1.1);
+        // }
+        &.swiper-slide-next {
+            box-shadow:  0px 0px 5px 1px rgba($theme1, 0.5);
+            z-index: 1;
+            transform: scale(1.2);
+            border-radius: 8px;
+        }
+    }
+    // .swiper-backface-hidden .swiper-slide {
+    //     // transform: scale(1.2);
+    //     // -webkit-backface-visibility: hidden;
+    //     // backface-visibility: hidden
+    //     box-shadow:  0px 0px 8px 0px rgba($theme1, 0.5);
+    //     z-index: 1;
+    //     transform: scale(1.1);
+    // }
+}
+
+
+// password management page start
+.passwordManagement {
+    // & .submitBtn {
+    //     &.disabled {
+    //         background-color:$theme-dark ;
+    //         &:hover {
+    //             background-color:$theme-dark ;
+    //         }
+    //     }
+    // }
+    & .changepasswardHeading {
+        font-size:18px ;
+        font-weight:500 ;
+        color:$text-gray ;
+    }
+}
+// password management page end

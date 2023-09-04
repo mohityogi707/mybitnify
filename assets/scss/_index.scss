@@ -1,0 +1,551 @@
+.indexMainPage{
+    & .ouutercard{
+        background: $theme-dark;
+        padding: 4px 0px;
+
+        & .marqeeSection{
+            & .marqueeText{
+                color:$textClr;
+                
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                & .icon{
+                    width: 8px;
+                    height: 5px;
+                }
+                & .subHeading{
+                    color: $theme-green;
+                    &.subHeading2{
+                        color:$theme-red;
+                    }
+
+                }
+            }
+        }
+    }
+    & .bestSellnav{
+        padding: 0px 16px;
+        & .navTabs{
+            border-radius: 5px;
+            background: $theme-dark;
+            padding: 4px;
+            & .navLink{
+                border-radius: 5px !important;
+                color:$text-gray;
+                
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                padding: 5px 13px;
+                &.navlink2{
+                    &.active{
+                        border-radius: 5px !important;
+                        padding: 5px 13px;
+                        background: $theme-red;
+                        color: white;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                }
+                &.active{
+                    border-radius: 5px !important;
+                    padding: 5px 13px;
+                    background: $theme-green;
+                    color: white;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+    & .sellerCard{
+        padding: 0px 16px !important;
+        & .tabContent{
+            & .tabePane{
+                & .btcCard{
+                    min-height: 150px;
+                    height: 100%;
+                    border-radius: 8px;
+                    background: $theme-dark;
+                    position: relative;
+                    // &.active{
+                    //     box-shadow:  0px 0px 8px 0px rgba($theme1, 0.5);
+                    //     z-index: 1;
+                    //     transform: scale(1.1);
+                    // }
+                    & .card-body{
+                        & .CardContent{
+                            & .cardImg{
+                                width: 40px;
+                                height: 40px;
+                            }
+                            & .cardHeaing{
+                                color: $textClr;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;
+                            }
+                            & .pera{
+                                color:$textClr;
+                                
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+                        }
+                    }
+                }
+
+                // & .portfolio{
+                //     // padding: 10px 16px !important;
+                //     & .outterCard{
+                //       background-color: $theme-dark;
+                //       border-radius: 7px;
+                //       padding: 15px 20px;
+                //       & .portfolioCard{
+                //          position: relative;
+                //          &::before{
+                //           position: absolute;
+                //           content: '';
+                //           right: 0;
+                //           top: 0px;
+                //           width: 1px;
+                //           height: 33px;
+                //           background-color:$theme-blue;
+              
+                //          }
+                //          &:last-child{
+                //           &::before{
+                //               display: none;
+                //           }
+                //          }
+                //           & .subHeading{
+                //               color: $text-gray;
+                              
+                //               font-size: 14px;
+                //               font-style: normal;
+                //               font-weight: 400;
+                //               line-height: normal;
+                //           }
+                //           & .headingcard{
+                //               color:$textClr;
+                              
+                //               font-size: 14px;
+                //               font-style: normal;
+                //               font-weight: 400;
+                //               line-height: normal;
+                //           }
+                //           & .pera{
+                //               color:$theme-green;
+                //               font-size: 10px;
+                //               font-style: normal;
+                //               font-weight: 400;
+                //               line-height: normal;
+                //               & .icon{
+                //                   width: 12px;
+                //                   height: 14px;
+                //               }
+                //               &.loss {
+                //                 color: $theme-red;
+                //               }
+                //           }
+                //       }
+                //     }
+                // }
+                    & .owlSection{
+                        // padding: 10px 16px !important;
+                
+                        
+                    }
+                    & .binanceCard{
+                        // padding: 5px 16px !important;
+                        & .outterCard{
+                            background-color: $theme-dark;
+                            border-radius: 8px;
+                            padding: 15px;
+                            & .icon{
+                                width: 31px;
+                                height: 31px;
+                            }
+                            & .ethHeading{
+                                color:$textClr;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;
+                            }
+                            & .pera{
+                                color: $theme-blue;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+                            & .dollerHeading{
+                                color:$textClr;
+                                text-align: center;
+                                
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+                            & .dollerPera{
+                                color:$text-gray;
+                                text-align: center;
+                                
+                                font-size: 10px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                                &.dollerPera2{
+                                    font-size: 9px;
+                                }
+                            }
+                            & .buyBtn{
+                                font-size: 12px;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                    & .ArbitrageCard{
+                        // padding: 5px 16px !important;
+                        & .outterCard{
+                        background-color: $theme-dark;
+                        border-radius:5px;
+                        padding: 15px;
+                        & .icon{
+                            width: 15px;
+                            height: 15px;
+                        }
+                        & .criptoHeading{
+                            color:$textClr;
+                            
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+                        & .criptoSubheading{
+                            color:$theme-blue;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                        & .pera{
+                            color: $textClr;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                        & .bitcoinSubheading{
+                            color:$text-gray;
+                            font-size: 9px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                        & .bitcoinHeading{
+                            color:$textClr;
+                            
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                        & .buyBtn{
+                            font-size: 12px;
+                            border-radius: 5px;
+                        }
+                        }
+                    }
+            }
+        }
+    }
+    & .portfolio{
+        // padding: 10px 16px !important;
+        & .outterCard{
+          background-color: $theme-dark;
+          border-radius: 7px;
+          padding: 15px 20px;
+          & .portfolioCard{
+             position: relative;
+             &::before{
+              position: absolute;
+              content: '';
+              right: 0;
+              top: 0px;
+              width: 1px;
+              height: 33px;
+              background-color:$theme-blue;
+  
+             }
+             &:last-child{
+              &::before{
+                  display: none;
+              }
+             }
+              & .subHeading{
+                  color: $text-gray;
+                  
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+              }
+              & .headingcard{
+                  color:$textClr;
+                  
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+              }
+              & .pera{
+                  color:$theme-green;
+                  font-size: 10px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  & .icon{
+                      width: 12px;
+                      height: 14px;
+                  }
+                  &.loss {
+                    color: $theme-red;
+                  }
+              }
+          }
+        }
+    }
+}
+.ArbitrageCard{
+    // padding: 5px 16px !important;
+    & .outterCard{
+        background-color: $theme-dark;
+        border-radius:5px;
+        padding: 15px;
+        & .icon{
+            width: 15px;
+            height: 15px;
+        }
+        & .criptoHeading{
+            color:$textClr;
+            
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        & .criptoSubheading{
+            color:$theme-blue;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        & .pera{
+            color: $textClr;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        & .bitcoinSubheading{
+            color:$text-gray;
+            font-size: 9px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        & .bitcoinHeading{
+            color:$textClr;
+            
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        & .buyBtn{
+            font-size: 12px;
+            border-radius: 5px;
+        }
+    }
+}
+
+.coinPagination{
+    & .outterCard{
+        background-color: $theme-dark;
+        border-radius: 8px;
+        padding: 9px 18px;
+        & .coinHeading{
+            color: $textClr;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        & .icon{
+            width: 6px;
+            height: 6px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+// noDataSection 
+
+.noDataSection{
+    & .nodataCard{
+        & .outterCard{
+            position: relative;
+            overflow: hidden;
+            background-color:$theme-dark;
+            height: 200px;
+            width: 100%;
+            & .imgdata{
+                width: 120px;
+                height: 120px;
+            }
+            & .dataHeading{
+                text-align: center;
+                font-size: 14px;
+                font-weight: 400;
+                color: $textClr;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include media-breakpoint(basic) {
+}
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {}
+
+
+@include media-breakpoint-down(xxl) {}
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+// support request 
+
+.supportRequest{
+    
+    & .supportSection{
+        & .fromSection{
+            & .cards{
+                & .inputtopLablel{
+                    color: $textClr;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 14px;
+                    left: 28px;
+                    background-color: $theme-dark;
+                    z-index: 1;
+                }
+                & .fileSubheading{
+                    font-size: 10px;
+                    color: $textClr;
+
+                }
+                & .inputgroup{
+                    & .fromLabel{
+                        height: 47px;
+                        border: 1px solid $dark-border;
+                        color: $text-gray;
+                        font-size: 16px;
+                        border-radius: 10px !important;
+                        padding: 0px 13px;
+                        cursor: pointer;
+                        &:focus{
+                            border-color: $theme-blue !important;
+                        }
+                        & .textIcon{
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                }
+                & .form-floating{
+                    & .formSelect{
+                        padding: 5px 20px 5px 10px;
+                        color: $light-bg;
+                        font-size: 16px;
+                        font-weight: 400;
+                        cursor: pointer;
+                        &:focus{
+                            border-color: $theme-blue;
+                        }
+
+                    }
+                    & .formInput{
+                        resize: none;
+                        // cursor: pointer;
+                        height: 140px;
+                        &:focus{
+                            border-color: $theme-blue;
+                        }
+                        &::placeholder{
+                            color: $textClr;
+                            font-size: 16px; 
+                        }
+                    }
+                 
+                }
+          
+            }
+        }
+    }
+}
